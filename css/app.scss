@@ -120,10 +120,10 @@ h6,
   }
 }
 
-a.navbar-brand:hover {
-  color: #1A237E !important;
-  opacity: 0.7;
-}
+// a.navbar-brand:hover {
+//   color: #1A237E !important;
+//   opacity: 0.7;
+// }
 
 .container.content {
   margin-top: 40px;
@@ -144,38 +144,79 @@ a {
   transition: all .2s;
 }
 
-.jumbotron {
+.jumbotron h1 {
+  letter-spacing: .1em;
   // background-color: #348eda;
-  color: $filmhub-blue;
-  a.textlink {
-    color: $filmhub-blue;
-    border-bottom: $filmhub-blue 2px dotted;
-    padding-bottom: 4px;
-    &:hover {
-      border-bottom: $filmhub-blue 2px solid;
-      text-decoration: none;
-    }
-  }
-  ul {
-    @extend p;
-  }
 }
 
 .jumbo-home {
-  background: #fff url('../images/globe-redo_v2.png') no-repeat top center;
+  background-color: $bg-navy; /* #e67d25 #4C5679; #36426B */
+  // background: #fff url('../images/globe-redo_v2.png') no-repeat top center;
   margin-bottom: 0;
+  .navbar-default {
+    .navbar-nav > li > a, .navbar-brand {
+      color: $silver;
+      &:hover {
+        opacity: 0.7;
+      }
+      &.btn.btn-default.btn-s.hidden-xs {
+        background-color: transparent; // $yellow;//  #1A237E;
+        color: $brand-success;
+        border-width: 0px;
+        font-weight: 900;
+        margin: 6px 0;
+        padding: 9px;
+        &:hover {
+          background: $yellow;
+          color: $gray;
+          opacity: 1.0;
+        }
+      }
+    }
+
+  }
   .jumbotron {
-    background-color: transparent;
+    color: $silver;
+    background-color: $bg-navy;
+    margin-bottom: 0;
+    p.lead {
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+    h1 b, p b {
+      color: $yellow;
+    }
+    img {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    a.textlink {
+      color: $silver;
+      border-bottom: $silver 2px dotted;
+      padding-bottom: 2px;
+      &:hover {
+        border-bottom: $silver 2px solid;
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
     a.btn.btn-default {
-      background-color: #1A237E; // #FF6F00
+      background-color: $yellow; // $yellow;//  #1A237E;
+      color: $text-color;
       border-width: 0;
       text-transform: uppercase;
       font-size: 16px;
       font-weight: 900;
       &:hover {
-        color: white;
-        background-color: #2230ab; // #FF8A3E
+        color: $white;
+        background-color: $bg-gray; // #2230ab;
       }
+      margin-right: 20px;
+    }
+    ul {
+      @extend p;
     }
   }
 }
@@ -186,7 +227,7 @@ h1 small {
 
 .page-home .jumbotron a.btn-default, .page-amazon .jumbotron a.btn-default, .page-vimeo .jumbotron a.btn-default, .page-hoopla .jumbotron a.btn-default{
   margin-top: 20px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   padding: 20px;
   font-size: 26px;
   font-weight: 200;
